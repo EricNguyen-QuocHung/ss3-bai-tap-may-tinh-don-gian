@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function addToFinalOutPut(input) {
+            document.getElementById("output").value += input;
+        }
+        function calculateResult() {
+            let totalInput = document.getElementById("output").value;
+            console.log(totalInput);
+            let result = eval(totalInput);
+            document.getElementById("output").value = result;
+        }
+        function reset() {
+            document.getElementById("output").value = "";
+        }
+    </script>
+</head>
+<style>
+    .button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 25px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <h1>CALCULATOR</h1>
+    <input type="text" id="output" size="50" placeholder="Press button to input">
+    <table>
+        <tr>
+            <th><button class="button no1" type="text" id="no1" value="1" onclick="addToFinalOutPut(this.value)">1</button></th>
+            <th><button class="button no2" type="text" id="no2" value="2" onclick="addToFinalOutPut(this.value)">2</button></th>
+            <th><button class="button no3" type="text" id="no3" value="3" onclick="addToFinalOutPut(this.value)">3</button></th>
+            <th><button class="button addOperator" type="text" id="addOperator" value="+" onclick="addToFinalOutPut(this.value)">+</button></th>
+        </tr>
+        <tr>
+            <th><button class="button no4" type="text" id="no4" value="4" onclick="addToFinalOutPut(this.value)">4</button></th>
+            <th><button class="button no5" type="text" id="no5" value="5" onclick="addToFinalOutPut(this.value)">5</button></th>
+            <th><button class="button no6" type="text" id="no6" value="6" onclick="addToFinalOutPut(this.value)">6</button></th>
+            <th><button class="button subOperator" type="text" id="subOperator" value="-" onclick="addToFinalOutPut(this.value)">-</button></th>
+        </tr>
+        <tr>
+            <th><button class="button no7" type="text" id="no7" value="7" onclick="addToFinalOutPut(this.value)">7</button></th>
+            <th><button class="button no8" type="text" id="no8" value="8" onclick="addToFinalOutPut(this.value)">8</button></th>
+            <th><button class="button no9" type="text" id="no9" value="9" onclick="addToFinalOutPut(this.value)">9</button></th>
+            <th><button class="button mulOperator" type="text" id="mulOperator" value="*" onclick="addToFinalOutPut(this.value)">*</button></th>
+        </tr>
+        <tr>
+            <th><button class="button reset" class="button reset" type="text" id="reset" onclick="reset()">C</button></th>
+            <th><button class="button no0" type="text" id="no0" value="0" onclick="addToFinalOutPut(this.value)">0</button></th>
+            <th><button class="button equalOperator" type="text" id="equalOperator" value="=" onclick="calculateResult()">=</button></th>
+            <th><button class="button divOperator" type="text" id="divOperator" value="/" onclick="addToFinalOutPut(this.value)">/</button></th>
+        </tr>
+    </table>
+
+</body>
+</html>
